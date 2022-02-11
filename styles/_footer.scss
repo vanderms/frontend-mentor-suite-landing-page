@@ -2,12 +2,26 @@
 @use './typography';
 
 .footer-root {
-  @include container;
-  margin-top: rem(95);
-  margin-bottom: rem(72);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include size(100%, rem(464));
+    z-index: -999;
+    background-color: $cream;
+    left: 0;
+    bottom: 0;
+  }
+
+  .container {
+    @include container;
+    margin-top: rem(95);
+    padding-bottom: rem(72);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @include media(mobile) {
     margin-top: rem(56);
