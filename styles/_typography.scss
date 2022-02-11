@@ -26,7 +26,7 @@
   color: $dark-blue;
   font-weight: 700;
 
-  @include media(tablet){
+  @include media(tablet) {
     font-size: rem(40);
     line-height: rem(48);
   }
@@ -54,7 +54,7 @@
   color: $cream;
   font-weight: 400;
 
-  @include media(tablet){
+  @include media(tablet) {
     font-size: rem(18);
     line-height: rem(32);
   }

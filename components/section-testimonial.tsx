@@ -6,11 +6,13 @@ export default function SectionTestimonial() {
   return (
     <section className="section-testimonial-root">
       <div className="image">
-        <img className='desktop'
+        <img
+          className="desktop"
           src={path('/assets/image-jeremy-large.png')}
           alt="Jeremy Robinson"
         />
-         <img className='mobile'
+        <img
+          className="mobile"
           src={path('/assets/image-jeremy-small.png')}
           alt="Jeremy Robinson"
         />
@@ -19,7 +21,7 @@ export default function SectionTestimonial() {
         <SVGWhiteCurvedLine />
       </div>
       <div className="text">
-        <h2 className='title'>
+        <h2 className="title">
           It just <strong>works.</strong>
         </h2>
         <p className="quote">
