@@ -1,0 +1,165 @@
+@use './mixins' as *;
+@use './typography';
+
+
+.section-testimonial-root{
+  margin-top: rem(154);
+  @include container;
+  height: rem(600);
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+
+  
+
+  @include media(tablet){
+    margin-top: rem(92);
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media(mobile){
+    width: 100%;
+    margin-top: rem(56);
+  }
+
+  &::before{
+    content: '';
+    inset: rem(45) 0 0 0;
+    position: absolute;    
+    background-color: $dark-blue;
+    border-radius: rem(15);
+    z-index: -1;
+
+    @include media(tablet){      
+      top: rem(181);      
+    }
+  }
+
+  .image{
+    margin-left: rem(131);
+    position: relative;
+
+    @include media(tablet){
+      margin-left: rem(10);
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .desktop{
+      height: rem(600);
+      width: auto;
+
+      @include media(tablet){
+        display: none;
+      }
+    }
+    
+    .mobile{
+      display: none;
+      @include media(tablet){
+        display: unset;
+        @include size(auto, rem(402));
+      }
+
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      @include size(rem(294), rem(294));
+      border-radius: 50%;
+      background: #DB65E2;
+      opacity: 0.6;
+      filter: blur(135.914px);
+      bottom: rem(41);
+      left: rem(9);
+      z-index: -1;
+
+      @include media(tablet){
+        @include size(rem(197), rem(197));
+        bottom: rem(27);
+        margin-left: rem(22);
+        left: unset;
+      }
+    }
+  }
+
+  .pattern-wrapper{
+    margin-left: rem(26);
+    margin-top: rem(206);
+
+    @include media(tablet){
+      margin-left: 0;
+      margin-top: rem(40);
+      transform: scale(0.76);
+      transform-origin: center center;
+    }
+  }
+
+  .text{
+    margin-left: rem(50);
+    margin-top: rem(133);
+
+    @include media(tablet){
+      margin-left: 0;
+      margin-top: rem(37);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title{
+      @include typography.heading-l;
+      color: $white-cream;
+      font-weight: 400;
+
+      @include media(tablet){
+        text-align: center;
+      }      
+
+      strong{
+        font-weight: 700;
+      }
+    }
+
+    .quote{
+      margin-top: rem(40);
+      @include typography.quote;
+      width: rem(350);
+
+      @include media(tablet){
+        width: 83.2%;
+        text-align: center;
+      }
+    }
+
+    .author{
+      margin-top: rem(40);
+      
+      @include media(tablet){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(64);  
+      }
+     
+      
+
+      .name{
+        @include typography.heading-m;
+        color: $white-cream;
+      }
+      .role{
+        @include typography.heading-s;
+        color: $white-cream;
+        font-weight: 400;
+      }
+    }
+  }
+
+}

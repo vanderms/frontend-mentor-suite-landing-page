@@ -21,6 +21,7 @@
   .header-and-cta {
     margin-top: rem(46);
     width: rem(635);
+    height: rem(600 - 46);
     display: flex;
     flex-direction: column;
     @include media(tablet) {
