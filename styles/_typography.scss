@@ -3,9 +3,20 @@
 @mixin heading-xl {
   font-size: rem(72);
   line-height: rem(78);
-  letter-spacing: rem(-1);
+  letter-spacing: -1px;
   color: $dark-blue;
   font-weight: 400;
+
+  @include media(tablet){
+    font-size: rem(56);
+    line-height: rem(64);
+    letter-spacing: -0.78px;
+  }
+
+  @include media(mobile){    
+    font-size: rem(38);
+    line-height: rem(44);
+  }
 }
 
 @mixin heading-l {
@@ -44,6 +55,11 @@
   line-height: rem(32);
   color: $dark-blue;
   font-weight: 400;
+
+  @include media(tablet){
+    font-size: rem(16);
+    line-height: rem(28);
+  }
 }
 
 @mixin footer {
