@@ -8,13 +8,13 @@
   display: flex;
   justify-content: space-between;
 
-  @include media(tablet){
+  @include media(tablet) {
     margin-top: rem(80);
     flex-direction: column;
     justify-content: unset;
   }
 
-  @include media(mobile){
+  @include media(mobile) {
     margin-top: rem(56);
   }
 
@@ -23,11 +23,11 @@
     width: rem(635);
     display: flex;
     flex-direction: column;
-    @include media(tablet){
+    @include media(tablet) {
       width: rem(510);
       height: rem(482 - 46);
     }
-    @include media(mobile){
+    @include media(mobile) {
       margin-top: 0;
       width: 100%;
       height: auto;
@@ -38,28 +38,27 @@
     align-self: flex-end;
     margin-right: rem(59);
 
-    @include media(tablet){
+    @include media(tablet) {
       margin-right: rem(50);
       transform: scale(0.8);
     }
 
-    @include media(mobile){
+    @include media(mobile) {
       margin-right: rem(37);
       transform: scale(0.52);
       transform-origin: bottom right;
     }
-   
   }
 
   .title {
     margin-top: rem(14);
     @include typography.heading-xl;
 
-    @include media(tablet){
+    @include media(tablet) {
       margin-top: rem(11);
     }
 
-    @include media(mobile){
+    @include media(mobile) {
       margin-top: rem(8);
     }
   }
@@ -70,7 +69,7 @@
     width: rem(350);
     color: $grey;
 
-    @include media(mobile){
+    @include media(mobile) {
       margin-top: rem(32);
     }
   }
@@ -86,16 +85,21 @@
     border-radius: rem(6);
     margin-top: rem(52);
 
-    @include media(tablet){
+    @include media(tablet) {
       margin-top: rem(40);
     }
 
-    @include media(mobile){
+    @include media(mobile) {
       margin-top: rem(32);
     }
 
-    &:hover{
-      background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        #a060ff 0%,
+        #cb30e3 49.21%,
+        #ffa84e 100%
+      );
     }
   }
 
@@ -111,13 +115,13 @@
     z-index: -1;
     border-radius: rem(15);
 
-    @include media(tablet){
+    @include media(tablet) {
       left: unset;
       right: 0;
       @include size(rem(281), rem(482));
     }
 
-    @include media(mobile){
+    @include media(mobile) {
       position: static;
       background-image: url(path('/assets/image-hero-landscape.png'));
       @include size(100%, 0);
@@ -132,14 +136,14 @@
     flex-direction: column;
     gap: rem(63);
 
-    @include media(tablet){
+    @include media(tablet) {
       flex-direction: row;
       justify-content: space-between;
       gap: 0;
       margin-top: rem(88);
     }
 
-    @include media(mobile){
+    @include media(mobile) {
       flex-direction: column;
       gap: rem(32);
       margin-bottom: rem(56);
@@ -148,15 +152,15 @@
 
   .indicator {
     width: rem(190);
-    @include media(tablet){
+    @include media(tablet) {
       display: flex;
       align-items: center;
       flex-direction: column;
       width: rem(223);
     }
 
-    @include media(mobile){
-      width: 100%;      
+    @include media(mobile) {
+      width: 100%;
     }
     .quantity {
       @include typography.heading-l;

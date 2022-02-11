@@ -1,8 +1,7 @@
 @use './mixins' as *;
 @use './typography';
 
-
-.section-header-root{
+.section-header-root {
   @include container;
   margin-top: rem(50);
   height: rem(56);
@@ -10,16 +9,16 @@
   align-items: center;
   justify-content: space-between;
 
-  @include media(tablet){
+  @include media(tablet) {
     margin-top: rem(40);
   }
 
-  @include media(mobile){
+  @include media(mobile) {
     height: rem(48);
     margin-top: rem(24);
   }
 
-  .cta{
+  .cta {
     @include size(rem(219), rem(56));
     border: 1px solid $dark-blue;
     line-height: rem(56);
@@ -27,10 +26,10 @@
     border-radius: rem(6);
     font-weight: 700;
     letter-spacing: -0.16px;
-    font-size: rem(16);  
+    font-size: rem(16);
     color: $dark-blue;
-    
-    &:hover{
+
+    &:hover {
       background-color: $dark-blue;
       color: $white-cream;
     }
