@@ -1,0 +1,29 @@
+@use './mixins' as *;
+@use './typography';
+
+.footer-root {
+  @include container;
+  margin-top: rem(95);
+  margin-bottom: rem(72);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media(mobile) {
+    margin-top: rem(56);
+    margin-bottom: rem(80);
+    flex-direction: column;
+    gap: rem(33);
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: rem(28);
+  }
+
+  .copyright {
+    @include typography.footer;
+    color: $grey;
+  }
+}
