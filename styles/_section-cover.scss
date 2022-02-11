@@ -1,0 +1,74 @@
+@use './mixins' as *;
+@use './typography';
+
+.section-cover-root {
+  margin-top: rem(67);
+  @include container;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .header-and-cta {
+    margin-top: rem(46);
+    width: rem(635);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pattern-wrapper {
+    align-self: flex-end;
+    margin-right: rem(59);
+  }
+
+  .title {
+    margin-top: rem(22);
+    @include typography.heading-xl;
+  }
+
+  .description {
+    margin-top: rem(40);
+    @include typography.body;
+    width: rem(350);
+    color: $grey;
+  }
+
+  .cta {
+    @include size(rem(256), rem(61));
+    line-height: rem(61);
+    text-align: center;
+    background-color: $dark-blue;
+    color: $white-cream;
+    font-size: rem(18);
+    font-weight: 700;
+    border-radius: rem(6);
+    margin-top: rem(52);
+  }
+
+  .bg-image {
+    position: absolute;
+    @include size(rem(350), rem(600));
+    left: rem(475);
+    top: 0;
+    background-image: url(path('/assets/image-hero-portrait.png'));
+    z-index: -1;
+  }
+
+  .indicator-list {
+    margin-top: rem(106);
+    display: flex;
+    flex-direction: column;
+    gap: rem(63);
+  }
+
+  .indicator {
+    .quantity {
+      @include typography.heading-l;
+    }
+
+    .name {
+      margin-top: rem(1);
+      @include typography.heading-s;
+      font-weight: 400;
+    }
+  }
+}
