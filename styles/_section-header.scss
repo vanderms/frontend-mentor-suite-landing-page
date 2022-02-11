@@ -18,6 +18,11 @@
     margin-top: rem(24);
   }
 
+  @include media(small-mobile){
+    flex-direction: column;
+    gap: rem(16);
+  }
+
   .cta {
     @include size(rem(219), rem(56));
     border: 1px solid $dark-blue;
@@ -32,6 +37,6 @@
     &:hover {
       background-color: $dark-blue;
       color: $white-cream;
-    }
+    }    
   }
 }

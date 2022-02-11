@@ -11,7 +11,7 @@
     z-index: -999;
     background-color: $cream;
     left: 0;
-    bottom: 0;
+    bottom: 0;    
   }
 
   .container {
@@ -21,13 +21,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  @include media(mobile) {
-    margin-top: rem(56);
-    margin-bottom: rem(80);
-    flex-direction: column;
-    gap: rem(33);
+    @include media(mobile) {
+      margin-top: rem(56);
+      padding-bottom: rem(80);
+      flex-direction: column;
+      gap: rem(33);
+    }
   }
 
   .social-links {
